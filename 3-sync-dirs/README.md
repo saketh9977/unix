@@ -19,4 +19,4 @@ This is similar to the usecase-1, except that the destination is a remote locati
 
 As network I/O is more time consuming than Disk I/O, the time savings with rsync is more significant here, by propagating only the changes over network, instead of whole main copy.
 
-You may use `aws s3 sync <src> <dst>` two sync two s3 locations
+You may use `aws s3 sync <src> <dst>` to sync two s3 locations
