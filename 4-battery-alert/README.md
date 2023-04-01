@@ -9,5 +9,8 @@
 2. Based on the above information, it sends a desktop notification when one of the below conditions is met -
     - Battery percentage <= lower bound and battery status is discharging
     - Battery percentage >= upper bound and battery status is charging
-3. This shell script is scheduled using cronjob
+3. This shell script is scheduled to run every 5m using cronjob - 
+```
+0/5 * * * * bash ~/work/shell-scripts/battery_alert.sh &> ~/work/shell-scripts/logs/battery_alert.log
+```
 4. Tested on `macOS Ventura 13.3` on ARM-based CPU (M1)
