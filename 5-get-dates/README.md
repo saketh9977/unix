@@ -6,7 +6,7 @@ python etl.py 2023 10 18
 To invoke etl.py for whole month, you can use a shell script like this one
 
 ## Input
-change start & end dates as per your requirements inside `get_dates.txt` -
+change start & end dates as per your requirements inside `get_dates.sh` -
 ```
 get_dates__ "2023-10-18" "2023-10-21"
 ```
