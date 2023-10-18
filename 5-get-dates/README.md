@@ -24,4 +24,4 @@ echo "$year$month$day"
 python -u etl.py $year $month $day &> ./logs/$year-$month-$day.log &
 ```
 using above command inside for loop at `get_dates.sh -> line 41` is easier than Python.
-- Python for this usecase may need more effort for using multiprocessing package, managing log files, flushing STDOUT buffer etc. frequently.
+- Python for this usecase may need more effort for using multiprocessing package, managing log files, flushing STDOUT buffer frequently etc.
