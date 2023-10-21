@@ -1,1 +1,1 @@
-Access Individual folders for respective `README.md`s
+access individual folders for respective README.md files
