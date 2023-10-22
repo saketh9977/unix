@@ -9,7 +9,14 @@ PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 date
 echo "======================="
 
+if [ $# -ne 2 ]; then
+	echo "pass exactly 2 arguments: start_date & end_date in YYYY-mm-dd format"
+	exit 1
+fi
+
 res=()
+START_DATE=$1
+END_DATE=$2
 
 function get_dates__() {
 	start_date=$1
@@ -31,7 +38,7 @@ function get_dates__() {
 	done
 }
 
-get_dates__ "2023-10-18" "2023-10-21"
+get_dates__ $START_DATE $END_DATE
 
 for cur_date in "${res[@]}"; do
 	year=$(echo $cur_date | cut -d "-" -f1)
