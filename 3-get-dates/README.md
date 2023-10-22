@@ -3,7 +3,7 @@ Imagine a Python script that consumes YYYY MM DD as input arguments -
 ```
 python etl.py 2023 10 18
 ```
-To invoke etl.py for whole month, you can use a shell script like this one
+To invoke `etl.py` for whole month, you can use a shell script like this one which can trigger Python script in a loop for each day in a month
 
 ## Input
 change start & end dates as per your requirements inside `get_dates.sh` -
@@ -16,6 +16,11 @@ You can access each date's YYYY MM DD inside for loop at `line 41` -
 ```
 echo "$year$month$day"
 ```
+This can be replaced with any valid bash command like below -
+```
+python etl.py $year $month $day
+```
+
 
 ### Note:
 - Why not just use a simple python wrapper function that implements a similar logic? 
