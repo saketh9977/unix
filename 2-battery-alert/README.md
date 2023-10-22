@@ -1,4 +1,5 @@
-### Use Cases
+### What is this?
+A shell script that -
 1. Sends a desktop notification when Laptop's battery level falls below (<=) a lower bound - so that user can plug-in the charger
 2. Also, notifies when battery level crosses (>=) upper bound suggesting user to unplug charger.
 
