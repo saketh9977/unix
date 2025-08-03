@@ -1,5 +1,11 @@
 #!/bin/bash
 
+set -e
+echo "auth_monitor: starting..."
+date
+
+echo $USER
+
 # "log show" may miss some logs -  best-effort, non-fail-stop system; so, "log stream" is chosen.
 
 # grep doesn't flush output (i) either until its buffer is full or (ii) until it sees EOF
@@ -34,3 +40,7 @@ log stream --info --debug \
     print $1, substr($2, 1, 8), substr($2, index($2, "+")), "locked"
   }
 '
+
+date
+echo "auth_monitor: ending..."
+
