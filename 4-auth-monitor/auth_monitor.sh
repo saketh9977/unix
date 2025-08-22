@@ -48,6 +48,9 @@ log stream --info --debug \
     /Attempt #/ {
       print $1, substr($2, 1, 8), substr($2, index($2, "+")), "Attempt", $NF
     }
+    /focused user name: saketh/ {
+      print $1, substr($2, 1, 8), substr($2, index($2, "+")), "user=saketh"
+    }
     /Auth began/ {
       print $1, substr($2, 1, 8), substr($2, index($2, "+")), "validating..."
     }
